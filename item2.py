@@ -5,7 +5,7 @@ import getpass
 import hashlib
 import os
 import time
-from termcolor import colored
+
 
 def crack_senha(): ##Item 2 
     try:
@@ -20,7 +20,7 @@ def crack_senha(): ##Item 2
                         if guess_hash == password_hash:
                             end_time = time.time()  
                             print(f"[+] Senha do usuario '{username}' e: {password}")
-                            print(f"[*] Tempo para quebrar: {end_time - start_time:.2f} seconds")
+                            print(f"[*] Tempo para quebrar: {end_time - start_time:.9f} seconds")
                             break
                     else:
                         print("[-] Falha em tentar adivinhar senha para usuario '{}'".format(username))
@@ -73,7 +73,7 @@ while True:  ##Menu inicial
         nome = input("Informe seu nome: ")
         senha = getpass.getpass("Informe sua senha: ")
         
-        if len(nome)  > 4 or len(senha) >  4:
+        if len(senha) >  4:
             print("Nome e senha devem ter 4 caracteres.")
             continue
         senha_hash = hash_senha(senha)

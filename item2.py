@@ -7,7 +7,7 @@ import os
 import time
 from termcolor import colored
 
-def crack_senha():
+def crack_senha(): ##Item 2 
     try:
         with open("usuarios.txt", "r") as f:
             for line in f:
@@ -46,7 +46,7 @@ while True:  ##Menu inicial
     print("===========")
     print("1. Entrar com um perfil existente")
     print("2. Criar um novo perfil")
-    print("3. Quebrar senhas")
+    print("3. Quebrar senhas") ##Item 2
     print("4. Sair")
     print("===========")
     opcao = input("Escolha uma opção: ")

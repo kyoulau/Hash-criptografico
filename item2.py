@@ -3,7 +3,6 @@
 
 import getpass
 import hashlib
-import os
 import time
 
 
@@ -26,7 +25,7 @@ def crack_senha(): ##Item 2
                         print("[-] Falha em tentar adivinhar senha para usuario '{}'".format(username))
 
     except Exception as exc:
-        print('There was a problem: %s' % (exc))
+        print('Erro em executar: %s' % (exc))
 
 
 
